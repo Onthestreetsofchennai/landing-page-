@@ -285,9 +285,10 @@ class Component extends DCLogic {
     const seatsLeft = this.props.seatsLeft ?? 7;
     const seatsTotal = this.props.seatsTotal ?? 15;
     const digits = String(this.props.whatsappNumber ?? "919841610111");
+    const whatsappMessage = "Hi, I'm interested in joining the performer program.";
     return {
       seatsLeft, seatsTotal,
-      waHref: "https://wa.me/" + digits, // WhatsApp response number; form POST -> {{N8N_WEBHOOK_URL}} at handoff
+      waHref: "https://wa.me/" + digits + "?text=" + encodeURIComponent(whatsappMessage), // WhatsApp response number; form POST -> {{N8N_WEBHOOK_URL}} at handoff
       faq: this.faqData.map((f, i) => ({
         q: f.q, a: f.a,
         open: this.state.faq === i,
