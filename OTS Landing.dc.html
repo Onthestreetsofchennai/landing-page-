@@ -729,7 +729,7 @@ input::placeholder{color:#6E675C}select:invalid{color:#6E675C}
 <p class="dv-next">Try next: "go with <a class="dv-oid" href="#1a">1a</a>, desktop layout" · "hero of <a class="dv-oid" href="#1b">1b</a> with amber" · "tone the poster down"</p>
 </section>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;seatsLeft&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:7,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:0,&quot;max&quot;:30,&quot;section&quot;:&quot;Seat counter&quot;},&quot;seatsTotal&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:15,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:1,&quot;max&quot;:30,&quot;section&quot;:&quot;Seat counter&quot;},&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;91XXXXXXXXXX&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;seatsLeft&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:7,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:0,&quot;max&quot;:30,&quot;section&quot;:&quot;Seat counter&quot;},&quot;seatsTotal&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:15,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:1,&quot;max&quot;:30,&quot;section&quot;:&quot;Seat counter&quot;},&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;919841610111&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
 class Component extends DCLogic {
   state = { faq: { a: -1, b: -1, c: -1 }, sent: { a: false, b: false, c: false } };
   faqData = [
@@ -751,10 +751,10 @@ class Component extends DCLogic {
   renderVals() {
     const seatsLeft = this.props.seatsLeft ?? 7;
     const seatsTotal = this.props.seatsTotal ?? 15;
-    const digits = String(this.props.whatsappNumber ?? "91XXXXXXXXXX");
+    const digits = String(this.props.whatsappNumber ?? "919841610111");
     return {
       seatsLeft, seatsTotal,
-      waHref: "https://wa.me/" + digits, // TODO: real number, then form POST -> {{N8N_WEBHOOK_URL}} at handoff
+      waHref: "https://wa.me/" + digits, // WhatsApp response number; form POST -> {{N8N_WEBHOOK_URL}} at handoff
       faqA: this.mkFaq("a"), faqB: this.mkFaq("b"),
       sentA: this.state.sent.a, formA: !this.state.sent.a,
       sentB: this.state.sent.b, formB: !this.state.sent.b,

@@ -270,7 +270,7 @@ input::placeholder{color:#77719A}select:invalid{color:#77719A}
 </div>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;seatsLeft&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:7,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:0,&quot;max&quot;:30,&quot;section&quot;:&quot;Seat counter&quot;},&quot;seatsTotal&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:15,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:1,&quot;max&quot;:30,&quot;section&quot;:&quot;Seat counter&quot;},&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;91XXXXXXXXXX&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;seatsLeft&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:7,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:0,&quot;max&quot;:30,&quot;section&quot;:&quot;Seat counter&quot;},&quot;seatsTotal&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:15,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:1,&quot;max&quot;:30,&quot;section&quot;:&quot;Seat counter&quot;},&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;919841610111&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
 class Component extends DCLogic {
   state = { faq: -1, sent: false };
   faqData = [
@@ -284,10 +284,10 @@ class Component extends DCLogic {
   renderVals() {
     const seatsLeft = this.props.seatsLeft ?? 7;
     const seatsTotal = this.props.seatsTotal ?? 15;
-    const digits = String(this.props.whatsappNumber ?? "91XXXXXXXXXX");
+    const digits = String(this.props.whatsappNumber ?? "919841610111");
     return {
       seatsLeft, seatsTotal,
-      waHref: "https://wa.me/" + digits, // TODO: real number; form POST -> {{N8N_WEBHOOK_URL}} at handoff
+      waHref: "https://wa.me/" + digits, // WhatsApp response number; form POST -> {{N8N_WEBHOOK_URL}} at handoff
       faq: this.faqData.map((f, i) => ({
         q: f.q, a: f.a,
         open: this.state.faq === i,
