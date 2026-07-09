@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Raleway:wght@700;800&display=swap" rel="stylesheet"><script src="image-slot.js"></script><style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#0D0B1A;font-family:'DM Sans',system-ui,sans-serif;color:#F4F0FF;color-scheme:dark}
+a{color:#F577A1;text-decoration:none}a:hover{color:#F8A0BE}
+input::placeholder{color:#77719A}select:invalid{color:#77719A}
+@keyframes ots-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}html{scroll-behavior:auto}}
+</style></helmet>
+<div style="display:flex;flex-direction:column;min-height:100vh;background:#0D0B1A">
+<div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC);color:#fff;padding:9px 20px;font-size:12.5px;font-weight:700;text-align:center">
+<span>Cohort 1 forming now — {{ seatsLeft }} of {{ seatsTotal }} seats left</span>
+<a href="#apply" style="color:#fff;font-weight:700;white-space:nowrap;text-decoration:underline;text-underline-offset:3px">Claim yours →</a>
+</div>
+<div data-screen-label="Nav" style="position:sticky;top:0;z-index:50;background:rgba(13,11,26,.97);border-bottom:1px solid rgba(244,240,255,.12)">
+<div style="width:min(1140px,100% - 48px);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 0">
+<div style="font-family:Raleway,sans-serif;font-weight:800;font-size:17px;color:#F4F0FF;white-space:nowrap">On The Streets</div>
+<div style="display:flex;align-items:center;gap:clamp(14px,2.5vw,28px);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;flex-wrap:wrap">
+<a href="#method" style="color:#B9B3D0">Method</a><a href="#pace" style="color:#B9B3D0">Pace</a><a href="#stories" style="color:#B9B3D0">Stories</a><a href="#faq" style="color:#B9B3D0">FAQ</a>
+</div>
+<a href="{{ waHref }}" style="border:1px solid rgba(244,240,255,.35);color:#F4F0FF;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:9px 14px;border-radius:3px;white-space:nowrap">WhatsApp us</a>
+</div>
+</div>
+<div data-screen-label="Hero" style="width:min(1140px,100% - 48px);margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;padding:clamp(56px,9vw,110px) 0 clamp(40px,5vw,64px)">
+<div style="font-size:clamp(11px,1.2vw,12.5px);font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F577A1">The Couch-to-Stage Program · Chennai</div>
+<h1 style="margin:0;max-width:17ch;font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(40px,6.2vw,72px);line-height:1.06;color:#F4F0FF;text-wrap:balance">From your couch to a stage — <em style="font-style:italic;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC);-webkit-background-clip:text;background-clip:text;color:transparent">perform in 45 days.</em></h1>
+<p style="margin:0;max-width:52ch;font-size:clamp(15.5px,1.6vw,18px);line-height:1.65;color:#C9C3DE;text-wrap:pretty">Solo — your own 3–5 song set, played to a real crowd. Even if you've never held a guitar. Not lessons. A stage.</p>
+<div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap">
+<a href="{{ waHref }}" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC);color:#fff;font-size:15px;font-weight:700;padding:16px 28px;border-radius:3px">Message us on WhatsApp →</a>
+<a href="#apply" style="font-size:13.5px;font-weight:500;color:#B9B3D0;text-decoration:underline;text-underline-offset:3px">or apply with the form</a>
+</div>
+<div style="font-size:13px;color:#7E78A0">45 days · 3 online sessions a week, from home · one real stage at the end.</div>
+<div style="width:100%;aspect-ratio:16/7;min-height:260px;position:relative;margin-top:clamp(8px,2vw,20px)"><image-slot id="ots-r-hero" shape="rounded" radius="3" src="https://images.unsplash.com/photo-1666289186874-0d023fe7d002?q=80&w=1920&auto=format&fit=crop" credit="Photo by Adrià Sánchez Roqué on Unsplash" credit-href="https://unsplash.com/@asr_optical" placeholder="Real OTS shot — house lights on a solo performer, crowd POV" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+</div>
+<div style="border-top:1px solid rgba(244,240,255,.12);border-bottom:1px solid rgba(244,240,255,.12);padding:20px 0;display:flex;flex-direction:column;gap:14px">
+<div style="text-align:center;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7E78A0">Where On The Streets has played</div>
+<div style="overflow:hidden">
+<div style="display:flex;width:max-content;animation:ots-marquee 36s linear infinite">
+<div style="display:flex;align-items:center;gap:28px;padding-right:28px">
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">Marina Beach</span><span style="color:#F577A1;font-size:8px">◆</span>
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">Chennai Metro</span><span style="color:#F577A1;font-size:8px">◆</span>
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">City parks</span><span style="color:#F577A1;font-size:8px">◆</span>
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">Awe50me Weekend</span><span style="color:#F577A1;font-size:8px">◆</span>
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">VTK audio launch — opened for A.R. Rahman</span><span style="color:#F577A1;font-size:8px">◆</span>
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">Little Boy — the music van</span><span style="color:#F577A1;font-size:8px">◆</span>
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">1,500+ street shows</span><span style="color:#F577A1;font-size:8px">◆</span>
+</div>
+<div style="display:flex;align-items:center;gap:28px;padding-right:28px">
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">Marina Beach</span><span style="color:#F577A1;font-size:8px">◆</span>
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">Chennai Metro</span><span style="color:#F577A1;font-size:8px">◆</span>
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">City parks</span><span style="color:#F577A1;font-size:8px">◆</span>
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">Awe50me Weekend</span><span style="color:#F577A1;font-size:8px">◆</span>
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">VTK audio launch — opened for A.R. Rahman</span><span style="color:#F577A1;font-size:8px">◆</span>
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">Little Boy — the music van</span><span style="color:#F577A1;font-size:8px">◆</span>
+<span style="font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:#C9C3DE;white-space:nowrap">1,500+ street shows</span><span style="color:#F577A1;font-size:8px">◆</span>
+</div>
+</div>
+</div>
+</div>
+<div data-screen-label="Why OTS" style="width:min(1140px,100% - 48px);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:clamp(24px,4vw,64px);padding:clamp(56px,8vw,104px) 0 0">
+<div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F577A1">Why OTS</div>
+<div style="grid-column:span 2;min-width:min(300px,100%);display:flex;flex-direction:column;gap:22px">
+<p style="margin:0;max-width:62ch;font-size:clamp(15px,1.6vw,17.5px);line-height:1.7;color:#C9C3DE;text-wrap:pretty">OTS is a stage with a method attached. A real venue. A 74,000-strong audience. A 1,000+ musician network. You don't practise alone hoping it adds up — you follow a day-by-day plan and play a 3–5 song set live in front of a real room. Couch to stage.</p>
+<div style="max-width:24ch;font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(30px,3.6vw,44px);line-height:1.14;color:#F4F0FF;text-wrap:pretty">People come to On The Streets to <em style="font-style:italic;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC);-webkit-background-clip:text;background-clip:text;color:transparent">end the 'someday'</em></div>
+<a href="#method" style="font-size:14px;font-weight:700;color:#F577A1">Explore the method →</a>
+</div>
+</div>
+<div data-screen-label="Word on the street" style="width:min(760px,100% - 48px);margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:clamp(56px,8vw,104px) 0 0">
+<div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F577A1">Word on the street</div>
+<div style="font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(28px,4vw,44px);line-height:1.2;color:#F4F0FF">“You guys made our day.”</div>
+<p style="margin:0;font-size:14.5px;line-height:1.6;color:#B9B3D0;max-width:52ch">— a stranger at the café jam in Chennai where On The Streets began. That sentence is why OTS exists.</p>
+<div style="width:44px;height:3px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC)"></div>
+<p style="margin:0;font-size:12.5px;line-height:1.6;color:#7E78A0;max-width:56ch">Cohort 1's words will live here after the first show. We don't invent testimonials — role-labels only, never made-up names.</p>
+</div>
+<div id="stories" data-screen-label="Stories" style="width:min(1140px,100% - 48px);margin:0 auto;display:flex;flex-direction:column;gap:16px;padding:clamp(56px,8vw,104px) 0 0">
+<div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F577A1">Stories</div>
+<div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap">
+<h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(30px,3.6vw,44px);line-height:1.12;color:#F4F0FF;text-wrap:pretty">Real people. Real stage. <em style="font-style:italic">Real deadline.</em></h2>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#B9B3D0;max-width:38ch">Cohort 1 is forming now — imagery is representative stock until its real footage lands.</p>
+</div>
+<div style="width:44px;height:3px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC)"></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:16px;margin-top:8px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="aspect-ratio:4/5;position:relative"><image-slot id="ots-r-story1" shape="rounded" radius="3" src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=900&auto=format&fit=crop" credit="Photo by Jefferson Santos on Unsplash" credit-href="https://unsplash.com/@jefflssantos" placeholder="Beginner practising guitar at home" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+<div style="font-size:13px;font-weight:500;color:#C9C3DE">Week 1 vs the stage</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="aspect-ratio:4/5;position:relative"><image-slot id="ots-r-story2" shape="rounded" radius="3" src="https://images.unsplash.com/photo-1760092189954-5b2f6eb3ca88?q=80&w=900&auto=format&fit=crop" credit="Photo by Vitalii Onyshchuk on Unsplash" credit-href="https://unsplash.com/@true_zuzu" placeholder="Concert crowd facing a lit stage" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+<div style="font-size:13px;font-weight:500;color:#C9C3DE">The capstone crowd</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div style="aspect-ratio:4/5;position:relative"><image-slot id="ots-r-story3" shape="rounded" radius="3" src="https://images.unsplash.com/photo-1474752651386-dc296d69dc90?q=80&w=900&auto=format&fit=crop" credit="Photo by Mariana Vusiatytska on Unsplash" credit-href="https://unsplash.com/@mariana_" placeholder="Solo performer silhouetted against stage lights" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+<div style="font-size:13px;font-weight:500;color:#C9C3DE">A returner who quit an app, then performed</div>
+</div>
+</div>
+</div>
+<div id="method" data-screen-label="The method" style="width:min(1140px,100% - 48px);margin:0 auto;display:flex;flex-direction:column;gap:16px;padding:clamp(56px,8vw,104px) 0 0">
+<div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F577A1">The method</div>
+<div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap">
+<h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(30px,3.6vw,44px);line-height:1.12;color:#F4F0FF">Couch to <em style="font-style:italic;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC);-webkit-background-clip:text;background-clip:text;color:transparent">Stage</em></h2>
+<p style="margin:0;font-size:14px;line-height:1.65;color:#B9B3D0;max-width:46ch;text-wrap:pretty">Like Couch-to-5K, but the finish line is a stage. Four checkpoints, day by day — 1:1 coaching at the core, plus a weekly group class with your cohort of 15.</p>
+</div>
+<div style="width:44px;height:3px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC)"></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:clamp(16px,2.5vw,28px);margin-top:8px">
+<div style="border-top:1px solid rgba(245,119,161,.4);padding-top:18px;display:flex;flex-direction:column;gap:10px">
+<div style="width:34px;height:34px;border-radius:3px;background:rgba(244,240,255,.05);border:1px solid rgba(245,119,161,.5);color:#F577A1;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center">01</div>
+<div style="font-family:'Playfair Display',serif;font-weight:600;font-size:21px;color:#F4F0FF">Busker <span style="color:#F577A1">· ~day 12</span></div>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#B9B3D0">Your hands hurt, then your first riff lands. "I can't" becomes "I played that."</p>
+</div>
+<div style="border-top:1px solid rgba(245,119,161,.4);padding-top:18px;display:flex;flex-direction:column;gap:10px">
+<div style="width:34px;height:34px;border-radius:3px;background:rgba(244,240,255,.05);border:1px solid rgba(245,119,161,.5);color:#F577A1;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center">02</div>
+<div style="font-family:'Playfair Display',serif;font-weight:600;font-size:21px;color:#F4F0FF">Soloist <span style="color:#F577A1">· ~day 30</span></div>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#B9B3D0">You can play your whole 3–5 song set, solo, start to finish.</p>
+</div>
+<div style="border-top:1px solid rgba(245,119,161,.4);padding-top:18px;display:flex;flex-direction:column;gap:10px">
+<div style="width:34px;height:34px;border-radius:3px;background:rgba(244,240,255,.05);border:1px solid rgba(245,119,161,.5);color:#F577A1;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center">03</div>
+<div style="font-family:'Playfair Display',serif;font-weight:600;font-size:21px;color:#F4F0FF">Dress <span style="color:#F577A1">· ~day 40</span></div>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#B9B3D0">A full run in front of a small room. Nerves, handled.</p>
+</div>
+<div style="border-top:2px solid #F577A1;padding-top:18px;display:flex;flex-direction:column;gap:10px">
+<div style="width:34px;height:34px;border-radius:3px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center">04</div>
+<div style="font-family:'Playfair Display',serif;font-weight:600;font-size:21px;color:#F4F0FF">Headliner <span style="color:#F577A1">· day 45</span></div>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#B9B3D0">You walk on a real OTS stage and perform. Solo.</p>
+</div>
+</div>
+</div>
+<div id="pace" data-screen-label="Pick your pace" style="width:min(1140px,100% - 48px);margin:0 auto;display:flex;flex-direction:column;gap:16px;padding:clamp(56px,8vw,104px) 0 0">
+<div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F577A1">Pick your pace</div>
+<div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap">
+<h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(30px,3.6vw,44px);line-height:1.12;color:#F4F0FF">Your stage. <em style="font-style:italic">Your pace.</em></h2>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#B9B3D0;max-width:40ch">Same finish line — a real stage. Pick the pace your week allows.</p>
+</div>
+<div style="width:44px;height:3px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC)"></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:16px;margin-top:8px;align-items:stretch">
+<div style="border-radius:3px;padding:1px;background:linear-gradient(135deg,#F0771E,#F577A1,#9E76CC)">
+<div style="background:#17142B;border-radius:2px;padding:clamp(20px,2.5vw,28px);display:flex;flex-direction:column;gap:10px;height:100%;box-sizing:border-box">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap"><div style="font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(26px,2.6vw,32px);color:#F4F0FF">45 days</div><div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:linear-gradient(90deg,#F0771E,#F577A1);padding:4px 10px;border-radius:999px">Intensive</div></div>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#B9B3D0">Most reps, fastest ramp. For when you've got the time and want it now.</p>
+</div>
+</div>
+<div style="border:1px solid rgba(244,240,255,.14);background:rgba(244,240,255,.03);border-radius:3px;padding:clamp(20px,2.5vw,28px);display:flex;flex-direction:column;gap:10px;box-sizing:border-box">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap"><div style="font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(26px,2.6vw,32px);color:#F4F0FF">60 days</div><div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F577A1;border:1px solid rgba(245,119,161,.5);padding:4px 10px;border-radius:999px">Standard</div></div>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#B9B3D0">A steadier climb with more room to consolidate.</p>
+</div>
+<div style="border:1px solid rgba(244,240,255,.14);background:rgba(244,240,255,.03);border-radius:3px;padding:clamp(20px,2.5vw,28px);display:flex;flex-direction:column;gap:10px;box-sizing:border-box">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap"><div style="font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(26px,2.6vw,32px);color:#F4F0FF">90 days</div><div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F577A1;border:1px solid rgba(245,119,161,.5);padding:4px 10px;border-radius:999px">Relaxed</div></div>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#B9B3D0">For busy weeks — the same journey, more breathing space.</p>
+</div>
+</div>
+<p style="margin:0;font-size:13px;line-height:1.6;color:#7E78A0">Never played, coming back, or already strum a little? We place you right on the call.</p>
+</div>
+<div data-screen-label="The numbers" style="width:min(1140px,100% - 48px);margin:0 auto;display:flex;flex-direction:column;gap:16px;padding:clamp(56px,8vw,104px) 0 0">
+<div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F577A1">The numbers</div>
+<h2 style="margin:0;max-width:26ch;font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(28px,3.2vw,40px);line-height:1.16;color:#F4F0FF;text-wrap:pretty">A community that's been on the streets <em style="font-style:italic">since day one</em></h2>
+<div style="width:44px;height:3px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC)"></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr));gap:clamp(16px,2.5vw,28px);margin-top:8px">
+<div style="border-top:1px solid rgba(244,240,255,.16);padding-top:16px;display:flex;flex-direction:column;gap:6px"><div style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,3.2vw,40px);color:#F4F0FF">1,500+</div><div style="font-size:13px;color:#9C96BC">Street shows performed</div></div>
+<div style="border-top:1px solid rgba(244,240,255,.16);padding-top:16px;display:flex;flex-direction:column;gap:6px"><div style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,3.2vw,40px);color:#F4F0FF">74,000</div><div style="font-size:13px;color:#9C96BC">Audience behind the stage</div></div>
+<div style="border-top:1px solid rgba(244,240,255,.16);padding-top:16px;display:flex;flex-direction:column;gap:6px"><div style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,3.2vw,40px);color:#F4F0FF">1,000+</div><div style="font-size:13px;color:#9C96BC">Musicians in the network</div></div>
+<div style="border-top:1px solid rgba(244,240,255,.16);padding-top:16px;display:flex;flex-direction:column;gap:6px"><div style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,3.2vw,40px);color:#F4F0FF">15</div><div style="font-size:13px;color:#9C96BC">Seats per cohort</div></div>
+<div style="border-top:1px solid rgba(244,240,255,.16);padding-top:16px;display:flex;flex-direction:column;gap:6px"><div style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,3.2vw,40px);background:linear-gradient(90deg,#F0771E,#F577A1);-webkit-background-clip:text;background-clip:text;color:transparent">45</div><div style="font-size:13px;color:#9C96BC">Days, couch to stage</div></div>
+</div>
+</div>
+<div data-screen-label="Our promises" style="width:min(1140px,100% - 48px);margin:0 auto;display:flex;flex-direction:column;gap:16px;padding:clamp(56px,8vw,104px) 0 0">
+<div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F577A1">Our promises</div>
+<h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(30px,3.6vw,44px);line-height:1.12;color:#F4F0FF">Built on <em style="font-style:italic">straight talk</em></h2>
+<div style="width:44px;height:3px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC)"></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:16px;margin-top:8px">
+<div style="background:rgba(244,240,255,.05);border:1px solid rgba(244,240,255,.12);border-radius:3px;padding:22px;display:flex;flex-direction:column;gap:8px"><div style="font-size:15px;font-weight:700;color:#F4F0FF;line-height:1.35">No invented testimonials</div><p style="margin:0;font-size:13.5px;line-height:1.6;color:#B9B3D0">Cohort 1 is the first. Its real footage and words come after the show.</p></div>
+<div style="background:rgba(244,240,255,.05);border:1px solid rgba(244,240,255,.12);border-radius:3px;padding:22px;display:flex;flex-direction:column;gap:8px"><div style="font-size:15px;font-weight:700;color:#F4F0FF;line-height:1.35">No fake counters</div><p style="margin:0;font-size:13.5px;line-height:1.6;color:#B9B3D0">The seat count is real and CRM-driven. It never fake-decrements.</p></div>
+<div style="background:rgba(244,240,255,.05);border:1px solid rgba(244,240,255,.12);border-radius:3px;padding:22px;display:flex;flex-direction:column;gap:8px"><div style="font-size:15px;font-weight:700;color:#F4F0FF;line-height:1.35">A real date, a real stage</div><p style="margin:0;font-size:13.5px;line-height:1.6;color:#B9B3D0">Your show is on the calendar from day one. That deadline is the method.</p></div>
+<div style="background:rgba(244,240,255,.05);border:1px solid rgba(244,240,255,.12);border-radius:3px;padding:22px;display:flex;flex-direction:column;gap:8px"><div style="font-size:15px;font-weight:700;color:#F4F0FF;line-height:1.35">Numbers talked 1:1</div><p style="margin:0;font-size:13.5px;line-height:1.6;color:#B9B3D0">Founding-cohort pricing, discussed on the call once we both know it's a fit.</p></div>
+</div>
+</div>
+<div id="apply" data-screen-label="Apply" style="width:min(1140px,100% - 48px);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(28px,4vw,64px);padding:clamp(56px,8vw,104px) 0 0;align-items:start">
+<div style="display:flex;flex-direction:column;gap:18px">
+<h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(32px,3.8vw,48px);line-height:1.1;color:#F4F0FF">Apply for <em style="font-style:italic;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC);-webkit-background-clip:text;background-clip:text;color:transparent">your seat.</em></h2>
+<div style="width:44px;height:3px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC)"></div>
+<p style="margin:0;max-width:44ch;font-size:15.5px;line-height:1.65;color:#C9C3DE;text-wrap:pretty">Two minutes. We call you back within the hour to see if it's a fit — a real commitment, not a sign-up.</p>
+<a href="{{ waHref }}" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC);color:#fff;font-size:14.5px;font-weight:700;padding:15px 22px;border-radius:3px;align-self:flex-start">Fastest — message us on WhatsApp →</a>
+<p style="margin:0;max-width:44ch;font-size:13px;line-height:1.65;color:#7E78A0;text-wrap:pretty">We'll ring you shortly. Bring your questions — "am I too old", "I've failed before", all of it. That's what the call is for.</p>
+<div style="display:flex;align-items:center;gap:10px"><span style="font-size:12px;font-weight:700;color:#F4F0FF;border:1px solid rgba(244,240,255,.35);padding:6px 12px;border-radius:999px">{{ seatsLeft }} of {{ seatsTotal }} seats left</span><span style="font-size:12px;color:#7E78A0">Cohort 1 forming now</span></div>
+</div>
+<div style="background:rgba(244,240,255,.05);border:1px solid rgba(244,240,255,.12);border-radius:3px;padding:clamp(22px,3vw,32px);display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><div style="height:1px;flex:1;background:rgba(244,240,255,.14)"></div><span style="font-size:11.5px;font-weight:500;color:#7E78A0">or fill the form</span><div style="height:1px;flex:1;background:rgba(244,240,255,.14)"></div></div>
+<sc-if value="{{ formVisible }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;flex-direction:column;gap:6px"><label for="r-name" style="font-size:12.5px;font-weight:700;color:#C9C3DE">Name *</label><input id="r-name" name="name" type="text" required="required" placeholder="Your name" style="width:100%;box-sizing:border-box;background:rgba(13,11,26,.7);border:1px solid rgba(244,240,255,.16);border-radius:3px;padding:13px 14px;font-size:15px;font-family:'DM Sans',sans-serif;color:#F4F0FF"></input></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="r-phone" style="font-size:12.5px;font-weight:700;color:#C9C3DE">Phone / WhatsApp *</label><div style="display:flex;gap:8px"><span style="display:flex;align-items:center;padding:0 12px;background:rgba(13,11,26,.7);border:1px solid rgba(244,240,255,.16);border-radius:3px;font-size:14px;color:#B9B3D0">+91</span><input id="r-phone" name="phone" type="tel" required="required" placeholder="98400 00000" style="flex:1;min-width:0;box-sizing:border-box;background:rgba(13,11,26,.7);border:1px solid rgba(244,240,255,.16);border-radius:3px;padding:13px 14px;font-size:15px;font-family:'DM Sans',sans-serif;color:#F4F0FF"></input></div></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="r-email" style="font-size:12.5px;font-weight:700;color:#C9C3DE">Email (optional)</label><input id="r-email" name="email" type="email" placeholder="you@example.com" style="width:100%;box-sizing:border-box;background:rgba(13,11,26,.7);border:1px solid rgba(244,240,255,.16);border-radius:3px;padding:13px 14px;font-size:15px;font-family:'DM Sans',sans-serif;color:#F4F0FF"></input></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="r-played" style="font-size:12.5px;font-weight:700;color:#C9C3DE">Have you played guitar before? *</label><select id="r-played" name="played_before" required="required" defaultValue="" style="width:100%;box-sizing:border-box;background:rgba(13,11,26,.7);border:1px solid rgba(244,240,255,.16);border-radius:3px;padding:13px 14px;font-size:15px;font-family:'DM Sans',sans-serif;color:#F4F0FF"><option value="" disabled="disabled">Choose one…</option><option value="never">Never</option><option value="a-little">A little</option><option value="own-dust">I own one, gathers dust</option><option value="rusty">Yes, a bit rusty</option></select></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="r-time" style="font-size:12.5px;font-weight:700;color:#C9C3DE">How much time can you give each week? *</label><select id="r-time" name="weekly_time" required="required" defaultValue="" style="width:100%;box-sizing:border-box;background:rgba(13,11,26,.7);border:1px solid rgba(244,240,255,.16);border-radius:3px;padding:13px 14px;font-size:15px;font-family:'DM Sans',sans-serif;color:#F4F0FF"><option value="" disabled="disabled">Choose one…</option><option value="45">Lots — intensive (45 days)</option><option value="60">Steady — standard (60 days)</option><option value="90">A little — relaxed (90 days)</option><option value="unsure">Not sure yet</option></select></div>
+<div style="display:flex;flex-direction:column;gap:6px"><label for="r-pull" style="font-size:12.5px;font-weight:700;color:#C9C3DE">Which pulls you most? (optional)</label><select id="r-pull" name="pull" defaultValue="" style="width:100%;box-sizing:border-box;background:rgba(13,11,26,.7);border:1px solid rgba(244,240,255,.16);border-radius:3px;padding:13px 14px;font-size:15px;font-family:'DM Sans',sans-serif;color:#F4F0FF"><option value="" disabled="disabled">Choose one…</option><option value="stage">Playing on a real stage</option><option value="learning">Finally learning properly</option><option value="community">Meeting other musicians</option></select></div>
+<button type="submit" style="border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC);color:#fff;font-size:15px;font-weight:700;font-family:'DM Sans',sans-serif;padding:16px 22px;border-radius:3px">Send my application →</button>
+</form>
+</sc-if>
+<sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+<div style="border:1px solid rgba(245,119,161,.55);background:rgba(245,119,161,.08);border-radius:3px;padding:26px;display:flex;flex-direction:column;gap:8px;text-align:center">
+<div style="font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:26px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC);-webkit-background-clip:text;background-clip:text;color:transparent">You're in.</div>
+<p style="margin:0;font-size:14.5px;line-height:1.6;color:#C9C3DE">Keep your phone close — we call within the hour.</p>
+</div>
+</sc-if>
+</div>
+</div>
+<div id="faq" data-screen-label="FAQ" style="width:min(760px,100% - 48px);margin:0 auto;display:flex;flex-direction:column;gap:16px;padding:clamp(56px,8vw,104px) 0 0">
+<h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(28px,3.2vw,38px);line-height:1.16;color:#F4F0FF;text-align:center">The questions <em style="font-style:italic">everyone</em> asks</h2>
+<div style="width:44px;height:3px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC);margin:0 auto"></div>
+<div style="display:flex;flex-direction:column;border-top:1px solid rgba(244,240,255,.12);margin-top:8px">
+<sc-for list="{{ faq }}" as="item" hint-placeholder-count="6">
+<div style="border-bottom:1px solid rgba(244,240,255,.12)">
+<button onClick="{{ item.toggle }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;background:none;border:0;cursor:pointer;padding:18px 2px;text-align:left;font-family:'DM Sans',sans-serif;font-size:15.5px;font-weight:700;color:#F4F0FF"><span>{{ item.q }}</span><span style="color:#F577A1;font-size:19px;line-height:1;flex:none">{{ item.mark }}</span></button>
+<sc-if value="{{ item.open }}" hint-placeholder-val="{{ false }}"><p style="margin:0;padding:0 2px 18px;font-size:14.5px;line-height:1.65;color:#B9B3D0;text-wrap:pretty">{{ item.a }}</p></sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+<div id="blog" data-screen-label="From the streets" style="width:min(1140px,100% - 48px);margin:0 auto;display:flex;flex-direction:column;gap:16px;padding:clamp(56px,8vw,104px) 0 0">
+<div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap">
+<div style="display:flex;flex-direction:column;gap:12px"><div style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F577A1">From the streets</div><h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(30px,3.6vw,44px);line-height:1.12;color:#F4F0FF">Read before <em style="font-style:italic">you leap.</em></h2></div>
+<a href="#blog" style="font-size:13.5px;font-weight:700;color:#F577A1;white-space:nowrap">All stories →</a>
+</div>
+<div style="width:44px;height:3px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC)"></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:16px;margin-top:8px">
+<div style="background:rgba(244,240,255,.05);border:1px solid rgba(244,240,255,.12);border-radius:3px;overflow:hidden;display:flex;flex-direction:column">
+<div style="aspect-ratio:16/9;position:relative"><image-slot id="ots-r-blog1" shape="rect" src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?q=80&w=1200&auto=format&fit=crop" credit="Photo by Jacek Dylag on Unsplash" credit-href="https://unsplash.com/@dylu" placeholder="Guitar and notes on a dim desk" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:7px"><div style="font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F577A1">The method</div><div style="font-family:'Playfair Display',serif;font-weight:600;font-size:19px;line-height:1.3;color:#F4F0FF">Why an app can't get you on a stage</div><p style="margin:0;font-size:13.5px;line-height:1.6;color:#B9B3D0">Practising alone with no deadline is the thing that fails — not you. Here's what changes with a show date.</p></div>
+</div>
+<div style="background:rgba(244,240,255,.05);border:1px solid rgba(244,240,255,.12);border-radius:3px;overflow:hidden;display:flex;flex-direction:column">
+<div style="aspect-ratio:16/9;position:relative"><image-slot id="ots-r-blog2" shape="rect" src="https://images.unsplash.com/photo-1471478331149-c72f17e33c73?q=80&w=1200&auto=format&fit=crop" credit="Photo by Gabriel Gurrola on Unsplash" credit-href="https://unsplash.com/@gabrielgurrola" placeholder="Stage lights over a packed show" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:7px"><div style="font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F577A1">Show night</div><div style="font-family:'Playfair Display',serif;font-weight:600;font-size:19px;line-height:1.3;color:#F4F0FF">What actually happens at an OTS show</div><p style="margin:0;font-size:13.5px;line-height:1.6;color:#B9B3D0">House lights, a real crowd, your name on the line-up. A walkthrough of the night you're training for.</p></div>
+</div>
+<div style="background:rgba(244,240,255,.05);border:1px solid rgba(244,240,255,.12);border-radius:3px;overflow:hidden;display:flex;flex-direction:column">
+<div style="aspect-ratio:16/9;position:relative"><image-slot id="ots-r-blog3" shape="rect" src="https://images.unsplash.com/photo-1579797990179-4ca11c8b47fd?q=80&w=1200&auto=format&fit=crop" credit="Photo by Joey Nicotra on Unsplash" credit-href="https://unsplash.com/@joeynicotra" placeholder="Acoustic guitarist's hands on the fretboard" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:7px"><div style="font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F577A1">Couch-to-Stage</div><div style="font-family:'Playfair Display',serif;font-weight:600;font-size:19px;line-height:1.3;color:#F4F0FF">Days 1–12: hands hurt, then the riff lands</div><p style="margin:0;font-size:13.5px;line-height:1.6;color:#B9B3D0">The honest first fortnight — sore fingertips, the chord engine, and the first "I played that."</p></div>
+</div>
+</div>
+</div>
+<div data-screen-label="Final CTA" style="margin-top:clamp(56px,8vw,104px);padding:clamp(56px,7vw,88px) 24px;background:linear-gradient(135deg,rgba(240,119,30,.16),rgba(245,119,161,.14),rgba(158,118,204,.16)),#121022;border-top:1px solid rgba(245,119,161,.35);display:flex;flex-direction:column;gap:22px;text-align:center;align-items:center">
+<div style="max-width:24ch;font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(28px,3.8vw,46px);line-height:1.2;color:#F4F0FF;text-wrap:pretty">The next show is happening. The only question is whether you're <em style="font-style:italic">in the crowd</em> or <em style="font-style:italic;background:linear-gradient(90deg,#F0771E,#F577A1);-webkit-background-clip:text;background-clip:text;color:transparent">on the stage.</em></div>
+<a href="{{ waHref }}" style="display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(90deg,#F0771E,#F577A1,#9E76CC);color:#fff;font-size:15px;font-weight:700;padding:16px 32px;border-radius:3px">WhatsApp us — get on stage →</a>
+<div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center">
+<span style="font-size:12px;font-weight:700;color:#F4F0FF;border:1px solid rgba(244,240,255,.35);padding:6px 12px;border-radius:999px">{{ seatsLeft }} of {{ seatsTotal }} seats left</span>
+<a href="#apply" style="font-size:13px;font-weight:500;color:#C9C3DE;text-decoration:underline;text-underline-offset:3px">or use the application form</a>
+</div>
+</div>
+<div data-screen-label="Footer" style="border-top:1px solid rgba(244,240,255,.12)">
+<div style="width:min(1140px,100% - 48px);margin:0 auto;display:flex;flex-direction:column;gap:32px;padding:clamp(40px,5vw,64px) 0 28px">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:clamp(24px,3vw,40px)">
+<div style="display:flex;flex-direction:column;gap:10px;grid-column:span 1">
+<div style="font-family:Raleway,sans-serif;font-weight:800;font-size:18px;color:#F4F0FF">On The Streets</div>
+<p style="margin:0;max-width:30ch;font-size:13.5px;line-height:1.6;color:#B9B3D0">A Chennai music community putting first-timers on real stages. <em style="font-family:'Playfair Display',serif;font-style:italic;color:#F577A1">Spreading Smiles!</em></p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><div style="font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7E78A0">Program</div><a href="#method" style="font-size:13px;color:#B9B3D0">The method</a><a href="#pace" style="font-size:13px;color:#B9B3D0">Pick your pace</a><a href="#apply" style="font-size:13px;color:#B9B3D0">Apply</a><a href="#faq" style="font-size:13px;color:#B9B3D0">FAQ</a></div>
+<div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><div style="font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7E78A0">Stories</div><a href="#stories" style="font-size:13px;color:#B9B3D0">Real people, real stage</a><a href="#blog" style="font-size:13px;color:#B9B3D0">From the streets</a></div>
+<div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><div style="font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7E78A0">Talk to us</div><a href="{{ waHref }}" style="font-size:13px;color:#F577A1;font-weight:700">WhatsApp us →</a><a href="https://www.instagram.com/" style="font-size:13px;color:#B9B3D0">Instagram</a><a href="https://www.youtube.com/" style="font-size:13px;color:#B9B3D0">YouTube</a></div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid rgba(244,240,255,.12);padding-top:18px;flex-wrap:wrap">
+<span style="font-size:12px;color:#7E78A0">© 2026 On The Streets Foundation, Chennai</span>
+<span style="font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7E78A0">Cohort 1 · Couch-to-Stage</span>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;seatsLeft&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:7,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:0,&quot;max&quot;:30,&quot;section&quot;:&quot;Seat counter&quot;},&quot;seatsTotal&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:15,&quot;tsType&quot;:&quot;number&quot;,&quot;min&quot;:1,&quot;max&quot;:30,&quot;section&quot;:&quot;Seat counter&quot;},&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;91XXXXXXXXXX&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  state = { faq: -1, sent: false };
+  faqData = [
+    { q: "Am I too old / not talented?", a: "No. Day one is built for people who've never held a guitar. The variable is showing up three times a week, not your age." },
+    { q: "I've tried and quit before.", a: "You didn't fail. You practised alone, with no stage and no deadline. That's exactly what we fixed — a day-by-day plan and a real show date." },
+    { q: "I have no time.", a: "Three online sessions a week, from home. Pick 45, 60, or 90 days by the time you've got. No commute. If you can give that, we get you on stage." },
+    { q: "Do I perform with a band?", a: "No — this is you, solo. Your own 3–5 song set, your moment on the stage." },
+    { q: "Is it a class or 1:1?", a: "Both — 1:1 sessions with a coach built around your songs and pace, plus a weekly group class and an orientation. A small cohort (~15), never a crowded lecture hall." },
+    { q: "What does it cost?", a: "Founding-cohort pricing. We talk numbers on the call, once we know it's a fit." }
+  ];
+  renderVals() {
+    const seatsLeft = this.props.seatsLeft ?? 7;
+    const seatsTotal = this.props.seatsTotal ?? 15;
+    const digits = String(this.props.whatsappNumber ?? "91XXXXXXXXXX");
+    return {
+      seatsLeft, seatsTotal,
+      waHref: "https://wa.me/" + digits, // TODO: real number; form POST -> {{N8N_WEBHOOK_URL}} at handoff
+      faq: this.faqData.map((f, i) => ({
+        q: f.q, a: f.a,
+        open: this.state.faq === i,
+        mark: this.state.faq === i ? "–" : "+",
+        toggle: () => this.setState(s => ({ faq: s.faq === i ? -1 : i }))
+      })),
+      sent: this.state.sent, formVisible: !this.state.sent,
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
